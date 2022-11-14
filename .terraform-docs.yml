@@ -1,0 +1,13 @@
+formatter: "markdown"
+
+output:
+  file: "README.example.md"
+  mode: inject
+  # Using a block style string does not appear to work...
+  #... however a string with linebreaks does (uncomment to test, and comment 
+  # out the block template).
+  #template: "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->  
